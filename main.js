@@ -7,7 +7,7 @@ window.boot = function () {
     var settings = window._CCSettings;
     window._CCSettings = undefined;
 
-    if ( !settings.debug ) {
+    if (!settings.debug) {
         var uuids = settings.uuids;
 
         var rawAssets = settings.rawAssets;
@@ -59,7 +59,7 @@ window.boot = function () {
         }
     }
 
-    function setLoadingDisplay () {
+    function setLoadingDisplay() {
         // Loading splash scene
         var splash = document.getElementById('splash');
         var progressBar = splash.querySelector('.progress-bar span');
@@ -155,7 +155,7 @@ window.boot = function () {
             jsList = [bundledScript];
         }
     }
-    
+
     var option = {
         id: 'GameCanvas',
         scenes: settings.scenes,
@@ -200,7 +200,7 @@ if (false) {
     qqPlayDownloader.REMOTE_SERVER_ROOT = "";
     var prevPipe = cc.loader.md5Pipe || cc.loader.assetLoader;
     cc.loader.insertPipeAfter(prevPipe, qqPlayDownloader);
-    
+
     window.boot();
 }
 else if (window.jsb) {

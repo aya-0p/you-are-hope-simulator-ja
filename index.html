@@ -7,7 +7,8 @@
   <title>Cocos Creator | OHOLdesiger</title>
 
   <!--http://www.html5rocks.com/en/mobile/mobifying/-->
-  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
+  <meta name="viewport"
+    content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
 
   <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -53,7 +54,7 @@
   <script src="main.js" charset="utf-8"></script>
 
   <script type="text/javascript">
-    (function() {
+    (function () {
       // open web debugger console
       if (typeof VConsole !== 'undefined') {
         window.vConsole = new VConsole();
@@ -66,7 +67,7 @@
       cocos2d.async = true;
       cocos2d.src = window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.js';
 
-      var engineLoaded = function() {
+      var engineLoaded = function () {
         document.body.removeChild(cocos2d);
         cocos2d.removeEventListener('load', engineLoaded, false);
         window.boot();
