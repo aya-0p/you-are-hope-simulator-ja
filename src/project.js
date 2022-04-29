@@ -772,7 +772,7 @@ window.__require = function e(t, n, a) {
               var u = a[l][h][2]
                 , p = u.substr(u.length - 3, 3);
               if (p >= 174 && p <= 189) {
-                console.log("cc.isValid(parent.getChildByName(paper_state[point_x][point_y][1]" + cc.isValid(s.getChildByName(a[l][h][2]), !0));
+                /*console.log("cc.isValid(parent.getChildByName(paper_state[point_x][point_y][1]" + cc.isValid(s.getChildByName(a[l][h][2]), !0));*/
                 var _ = 1 * a[l][h][5] / d;
                 a[l][h][5] = _;
                 var m = o.target(_)
@@ -912,7 +912,7 @@ window.__require = function e(t, n, a) {
                 var d = a[e + r[h][0]][t + r[h][1]][1]
                   , u = d.substr(d.length - 3, 3);
                 if (u >= 118 && u <= 164) {
-                  console.log("cc.isValid(parent.getChildByName(paper_state[x+list[j][0]][y+list[j][1]][1]" + cc.isValid(n.getChildByName(a[e + r[h][0]][t + r[h][1]][1]), !0));
+                  /*console.log("cc.isValid(parent.getChildByName(paper_state[x+list[j][0]][y+list[j][1]][1]" + cc.isValid(n.getChildByName(a[e + r[h][0]][t + r[h][1]][1]), !0));*/
                   var p = 1 * a[e + r[h][0]][t + r[h][1]][4] / r[h][2];
                   a[e + r[h][0]][t + r[h][1]][4] = p;
                   var _ = o.target(p)
