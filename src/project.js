@@ -120,7 +120,7 @@ window.__require = function e(t, n, a) {
           , n = e % 3
           , a = e % 5
           , o = e % 7;
-        return console.log(),
+        return /*console.log()*/undefined,
           e = 174,
           0 !== t && 0 !== n && 0 !== a && 0 !== o && (e = 174),
           0 == t && 0 !== n && 0 !== a && 0 !== o && (e = 175),
@@ -173,10 +173,10 @@ window.__require = function e(t, n, a) {
         if (c.open > 0)
           var l = o[c.open];
         var h = c.open;
-        if (console.log(r),
+        if (/*console.log(r)*/undefined,
           t <= -1700) {
           c.open = n,
-            console.log("current_list.open:" + c.open);
+            /*console.log("current_list.open:" + c.open);*/undefined;
           for (var d = 1; d <= r; d++)
             switch (d) {
               case 1:
@@ -263,8 +263,8 @@ window.__require = function e(t, n, a) {
             }
         } else if (-540 == t) {
           c.open = 0,
-            console.log("cancel"),
-            console.log("current_list.open:" + c.open);
+            /*console.log("cancel")*/undefined,
+            /*console.log("current_list.open:" + c.open);*/undefined;
           for (d = r; d > 0; d--)
             switch (d) {
               case 1:
@@ -310,8 +310,8 @@ window.__require = function e(t, n, a) {
           c.open = 0
         } else if (t <= -540 && t > -1700) {
           c.open = 0,
-            console.log("cancel"),
-            console.log("current_list.open:" + c.open);
+            /*console.log("cancel")*/undefined,
+            /*console.log("current_list.open:" + c.open);*/undefined;
           for (d = r; d > 0; d--)
             switch (d) {
               case 1:
@@ -396,7 +396,7 @@ window.__require = function e(t, n, a) {
             }
           c.open = 0
         }
-        console.log(a[0])
+        /*console.log(a[0])*/undefined;
       },
       on_touch_cancel: function (e) {
         i.t2 = i.t2 + 1
@@ -426,16 +426,16 @@ window.__require = function e(t, n, a) {
       on_touch_end: function (e) {
         var t = this.node.parent.parent.parent.getChildByName("Q1-1").x;
         -1570 == t ? (this.node.parent.parent.parent.getChildByName("Q1-1").getComponent(cc.Animation).play("queueA1"),
-          console.log(t),
+          /*console.log(t)*/undefined,
           this.scheduleOnce(function () {
             this.node.parent.parent.parent.getChildByName("Q1-2").getComponent(cc.Animation).play("queueA1")
           }, .1)) : (this.node.parent.parent.parent.getChildByName("Q1-2").getComponent(cc.Animation).play("queueA1_back"),
-            console.log(2),
+            /*console.log(2)*/undefined,
             this.scheduleOnce(function () {
               this.node.parent.parent.parent.getChildByName("Q1-1").getComponent(cc.Animation).play("queueA1_back")
             }, .1)),
           a[0] = a[2],
-          console.log(a[0])
+          /*console.log(a[0])*/undefined;
       },
       onLoad: function () {
         this.node.on(cc.Node.EventType.TOUCH_END, this.on_touch_end, this)
@@ -479,7 +479,7 @@ window.__require = function e(t, n, a) {
         var n = this.node.getChildByName("Background").getComponent(cc.Sprite).spriteFrame.name
           , i = this.node.getChildByName("Background").width
           , d = this.node.getChildByName("Background").height;
-        console.log("button:" + n);
+        /*console.log("button:" + n);*/undefined;
         for (var u = this.node.parent.parent.parent.name.substr(1, 1), p = o[u], _ = 1; _ <= p; _++)
           switch (_) {
             case 1:
@@ -528,7 +528,7 @@ window.__require = function e(t, n, a) {
         100 / i * d <= 170 ? (this.bottom.getChildByName(m).getChildByName("Background").height = 100 / i * d,
           this.bottom.getChildByName(m).getChildByName("Background").width = 100) : (this.bottom.getChildByName(m).getChildByName("Background").height = 170,
             this.bottom.getChildByName(m).getChildByName("Background").width = 170 / d * i),
-          console.log("button_number" + u);
+          /*console.log("button_number" + u);*/undefined;
         var C = r[0][s[n][4]].getSpriteFrame(n);
         g.spriteFrame = C,
           a[0] = n,
@@ -624,7 +624,7 @@ window.__require = function e(t, n, a) {
         if (1 == o) {
           e.getLocation();
           var t = e.getDelta();
-          console.log(t),
+          /*console.log(t)*/undefined,
             this.node.getChildByName("paper_zoom").getChildByName("paper").x = this.node.getChildByName("paper_zoom").getChildByName("paper").x + t.x / 1,
             this.node.getChildByName("paper_zoom").getChildByName("paper").y = this.node.getChildByName("paper_zoom").getChildByName("paper").y + t.y / 1
         }
@@ -683,11 +683,11 @@ window.__require = function e(t, n, a) {
                 var d = a[e + r[h][0]][t + r[h][1]][2]
                   , u = d.substr(d.length - 3, 3);
                 if (u >= 174 && u <= 189) {
-                  console.log("cc.isValid(parent.getChildByName(paper_state[x+list[j][0]][y+list[j][1]][2]" + cc.isValid(n.getChildByName(a[e + r[h][0]][t + r[h][1]][2]), !0));
+                  /*console.log("cc.isValid(parent.getChildByName(paper_state[x+list[j][0]][y+list[j][1]][2]" + cc.isValid(n.getChildByName(a[e + r[h][0]][t + r[h][1]][2]), !0));*/undefined;
                   var p = 1 * a[e + r[h][0]][t + r[h][1]][5] / r[h][2];
                   a[e + r[h][0]][t + r[h][1]][5] = p;
                   var _ = o.target(p);
-                  console.log("[x+list[j][0]][y+list[j][1]" + (e + r[h][0]) + "-----" + (t + r[h][1]));
+                  /*console.log("[x+list[j][0]][y+list[j][1]" + (e + r[h][0]) + "-----" + (t + r[h][1]));*/undefined;
                   var m = i[0][c[_][4]].getSpriteFrame(_);
                   n.getChildByName(a[e + r[h][0]][t + r[h][1]][2]).getComponent(cc.Sprite).spriteFrame = m;
                   var g = d;
@@ -779,9 +779,9 @@ window.__require = function e(t, n, a) {
                   , g = i[0][c[m][4]].getSpriteFrame(m);
                 s.getChildByName(a[l][h][2]).getComponent(cc.Sprite).spriteFrame = g;
                 var C = u;
-                console.log("@@@@@@@@@@@@@@@" + C),
+                /*console.log("@@@@@@@@@@@@@@@" + C)*/undefined,
                   C = C.substr(0, C.length - 3) + m,
-                  console.log("@@@@@@@@@@@@@@@" + C),
+                  /*console.log("@@@@@@@@@@@@@@@" + C)*/undefined,
                   s.getChildByName(a[l][h][2]).name = C,
                   a[l][h][2] = C
               }
@@ -850,7 +850,7 @@ window.__require = function e(t, n, a) {
             i[7][1] = 1,
             i[7][2] = 13;
           for (s = 0; s < 8; s++)
-            if (console.log(a[e + i[s][0]][t + i[s][1]][1]),
+            if (/*console.log(a[e + i[s][0]][t + i[s][1]][1])*/undefined,
               a[e + i[s][0]][t + i[s][1]][1]) {
               var r = a[e + i[s][0]][t + i[s][1]][1]
                 , l = (r.substr(r.length - 3, 3),
@@ -919,9 +919,9 @@ window.__require = function e(t, n, a) {
                     , m = i[0][c[_][4]].getSpriteFrame(_);
                   n.getChildByName(a[e + r[h][0]][t + r[h][1]][1]).getComponent(cc.Sprite).spriteFrame = m;
                   var g = d;
-                  console.log("@@@@@@@@@@@@@@@" + g),
+                  /*console.log("@@@@@@@@@@@@@@@" + g)*/undefined,
                     g = g.substr(0, g.length - 3) + _,
-                    console.log("@@@@@@@@@@@@@@@" + g),
+                    /*console.log("@@@@@@@@@@@@@@@" + g)*/undefined,
                     n.getChildByName(a[e + r[h][0]][t + r[h][1]][1]).name = g,
                     a[e + r[h][0]][t + r[h][1]][1] = g
                 }
@@ -938,9 +938,9 @@ window.__require = function e(t, n, a) {
                     , b = i[0][c[N][4]].getSpriteFrame(N);
                   n.getChildByName(a[e + r[C][0]][t + r[C][1]][1]).getComponent(cc.Sprite).spriteFrame = b;
                   var B = y;
-                  console.log("@@@@@@@@@@@@@@@" + B),
+                  /*console.log("@@@@@@@@@@@@@@@" + B)*/undefined,
                     B = B.substr(0, B.length - 3) + N,
-                    console.log("@@@@@@@@@@@@@@@" + B),
+                    /*console.log("@@@@@@@@@@@@@@@" + B)*/undefined,
                     n.getChildByName(a[e + r[C][0]][t + r[C][1]][1]).name = B,
                     a[e + r[C][0]][t + r[C][1]][1] = B
                 }
@@ -1026,9 +1026,9 @@ window.__require = function e(t, n, a) {
         }
       },
       creat: function () {
-        console.log("123123"),
+        /*console.log("123123")*/undefined,
           a.data(this.target, void 0),
-          console.log("123123")
+          /*console.log("123123")*/undefined;
       },
       start: function () { }
     }),
@@ -1134,7 +1134,7 @@ window.__require = function e(t, n, a) {
           var t = e.getLocation()
             , n = e.getStartLocation();
           if (0 == n.fuzzyEquals(f, .5)) {
-            console.log("gooooooooooooood"),
+            /*console.log("gooooooooooooood")*/undefined,
               v = !0,
               f = n,
               r.erase = "x-y",
@@ -1158,7 +1158,7 @@ window.__require = function e(t, n, a) {
             L += 1,
             q >= 0 && T >= 0 && q < a.w && T < a.h && 2 !== o.t2 && k > 50 && 1 == v) {
             for (var E = 0; E < L; E++) {
-              console.log("locationList" + F);
+              /*console.log("locationList" + F);*/undefined;
               q = F[E][0],
                 T = F[E][1];
               if (0 !== i[0]) {
@@ -1175,7 +1175,7 @@ window.__require = function e(t, n, a) {
                   Q.name = ("000" + q).substr(-3) + ("000" + T).substr(-3) + U + z,
                   s[q][T][U] !== Q.name) {
                   if (s[q][T][U] && (this.node.getChildByName(s[q][T][U]).destroy(),
-                    console.log("destroy()"),
+                    /*console.log("destroy()")*/undefined,
                     s[q][T][U].substr(7, 3) >= 118 && s[q][T][U].substr(7, 3) <= 164 && (N[b][0] = q,
                       N[b][1] = T,
                       b += 1),
@@ -1225,7 +1225,7 @@ window.__require = function e(t, n, a) {
                     Q.scale = c[z][1]
                 }
               } else {
-                console.log("=0 start");
+                /*console.log("=0 start");*/undefined;
                 for (var D = !0, M = 3; M > 0; M--) {
                   if (s[q][T][M] && D && v)
                     (z = s[q][T][M].substr(7, 3)) >= 118 && z <= 164 ? (s[q][T][4] = void 0,
@@ -1258,7 +1258,7 @@ window.__require = function e(t, n, a) {
           q = Math.floor(S.x / 100),
             T = Math.floor(S.y / 100);
           if (q >= 0 && T >= 0 && q < a.w && T < a.h && 2 !== o.t2 && k > 50 && 0 == v)
-            if (console.log("=more0000  start"),
+            if (/*console.log("=more0000  start")*/undefined,
               0 !== i[0]) {
               var P = new cc.Node("new sprite")
                 , Z = P.addComponent(cc.Sprite);
@@ -1273,7 +1273,7 @@ window.__require = function e(t, n, a) {
                 P.name = ("000" + q).substr(-3) + ("000" + T).substr(-3) + U + z,
                 s[q][T][U] !== P.name) {
                 if (s[q][T][U] && (this.node.getChildByName(s[q][T][U]).destroy(),
-                  console.log("destroy()"),
+                  /*console.log("destroy()")*/undefined,
                   s[q][T][U].substr(7, 3) >= 118 && s[q][T][U].substr(7, 3) <= 164 && (N[b][0] = q,
                     N[b][1] = T,
                     b += 1),
@@ -1322,15 +1322,15 @@ window.__require = function e(t, n, a) {
                 var Y = C[0][c[z][4]].getSpriteFrame(z);
                 Z.spriteFrame = Y,
                   P.scale = c[z][1],
-                  console.log(P.name),
-                  console.log(P.zIndex)
+                  /*console.log(P.name)*/undefined,
+                  /*console.log(P.zIndex)*/undefined;
               }
             } else {
-              console.log("=more0  start");
+              /*console.log("=more0  start");*/undefined;
               D = !0;
               var $ = q + "-" + T;
-              console.log(r.erase),
-                console.log($);
+              /*console.log(r.erase)*/undefined,
+                /*console.log($);*/undefined;
               for (var ee = 3; ee > 0; ee--) {
                 if (s[q][T][ee] && D && $ !== r.erase)
                   (z = s[q][T][ee].substr(7, 3)) >= 118 && z <= 164 ? (s[q][T][4] = void 0,
@@ -1364,7 +1364,7 @@ window.__require = function e(t, n, a) {
             , f = Math.floor(n.x / 100)
             , v = Math.floor(n.y / 100);
           if (f >= 0 && v >= 0 && f < a.w && v < a.h && 2 !== o.t2)
-            if (console.log("=more0000  start"),
+            if (/*console.log("=more0000  start")*/undefined,
               0 !== i[0]) {
               var F = new cc.Node("new sprite")
                 , L = F.addComponent(cc.Sprite);
@@ -1376,10 +1376,10 @@ window.__require = function e(t, n, a) {
                 F.y = 100 * v + 50 - this.node.height / 2 + c[J][3],
                 F.zIndex = 1e4 * R - (99 - f + 100 * v) - 1,
                 F.name = ("000" + f).substr(-3) + ("000" + v).substr(-3) + R + J,
-                console.log("new insert  item:" + F.name),
+                /*console.log("new insert  item:" + F.name)*/undefined,
                 s[f][v][R] !== F.name) {
                 if (s[f][v][R] && (this.node.getChildByName(s[f][v][R]).destroy(),
-                  console.log("destroy()" + s[f][v][R]),
+                  /*console.log("destroy()" + s[f][v][R])*/undefined,
                   s[f][v][R].substr(7, 3) >= 118 && s[f][v][R].substr(7, 3) <= 164 && (N[b][0] = f,
                     N[b][1] = v,
                     b += 1)),
@@ -1401,7 +1401,7 @@ window.__require = function e(t, n, a) {
                   (S || q || T || E || Q) && (s[f][v][1] && s[f][v][1].substr(7, 3) >= 118 && s[f][v][1].substr(7, 3) <= 164 && (N[b][0] = f,
                     N[b][1] = v,
                     b += 1,
-                    console.log(N)),
+                    /*console.log(N))*/undefined,
                     l.location(f, v, this.node)),
                   s[f][v][R] = F.name,
                   J >= 118 && J <= 164 && (s[f][v][4] = h.target(f, v),
@@ -1409,20 +1409,20 @@ window.__require = function e(t, n, a) {
                   J >= 174 && J <= 189 && (s[f][v][5] = p.target(f, v),
                     m.location(f, v, this.node)),
                   J >= 166 && J <= 173 && g.location(f, v, J, this.node),
-                  console.log(F.name),
+                  /*console.log(F.name)*/undefined,
                   L.trim = !1,
                   L.sizeMode = cc.Sprite.SizeMode.RAW,
-                  F.parent = this.node;
+                  F.parent = this.node);///////////////////
                 var I = C[0][c[J][4]].getSpriteFrame(J);
                 L.spriteFrame = I,
                   F.scale = c[J][1]
               }
             } else {
-              console.log("=more0  start");
+              /*console.log("=more0  start");*/undefined;
               var z = !0
                 , U = f + "-" + v;
-              console.log(r.erase),
-                console.log(U);
+              /*console.log(r.erase)*/undefined,
+                /*console.log(U);*/undefined;
               for (var H = 3; H > 0; H--)
                 if (s[f][v][H] && z && U !== r.erase) {
                   this.node.getChildByName(s[f][v][H]).destroy();
@@ -1505,7 +1505,7 @@ window.__require = function e(t, n, a) {
         }
       },
       on_touch_end: function (e) {
-        console.log("sjdfoasdifjsaiojfosajfdos");
+        /*console.log("sjdfoasdifjsaiojfosajfdos");*/undefined;
         var t = (t = this.node.parent.name).substr(1, 1)
           , n = o[t][0]
           , a = this.target.getComponent(cc.Sprite);
@@ -1571,19 +1571,19 @@ window.__require = function e(t, n, a) {
         target: function (e, t) {
           var n, o = 1;
           a[e + 1][t][2] && (n = (n = a[e + 1][t][2]).substr(n.length - 3, 3),
-            console.log(n),
+            /*console.log(n)*/undefined,
             n >= 174 && n <= 189 && (o *= 2),
             166 != n && 167 != n || (o *= 2));
           a[e][t - 1][2] && (n = (n = a[e][t - 1][2]).substr(n.length - 3, 3),
-            console.log(n),
+            /*console.log(n)*/undefined,
             n >= 174 && n <= 189 && (o *= 3),
             168 != n && 169 != n || (o *= 3));
           a[e - 1][t][2] && (n = (n = a[e - 1][t][2]).substr(n.length - 3, 3),
-            console.log(n),
+            /*console.log(n)*/undefined,
             n >= 174 && n <= 189 && (o *= 5),
             170 != n && 171 != n || (o *= 5));
           a[e][t + 1][2] && (n = (n = a[e][t + 1][2]).substr(n.length - 3, 3),
-            console.log(n),
+            /*console.log(n)*/undefined,
             n >= 174 && n <= 189 && (o *= 7),
             172 != n && 173 != n || (o *= 7));
           return o
@@ -1627,31 +1627,31 @@ window.__require = function e(t, n, a) {
         e("item_data"),
       {
         target: function (e, t) {
-          console.log(a[e + 1][t][1]);
+          /*console.log(a[e + 1][t][1]);*/undefined;
           var n, o = 1;
           a[e + 1][t][1] && (n = (n = a[e + 1][t][1]).substr(n.length - 3, 3),
-            console.log(n),
+            /*console.log(n)*/undefined,
             n >= 118 && n <= 164 && (o *= 2));
           t - 1 >= 0 && (a[e][t - 1][1] && (n = (n = a[e][t - 1][1]).substr(n.length - 3, 3),
-            console.log(n),
+            /*console.log(n)*/undefined,
             n >= 118 && n <= 164 && (o *= 3)));
           e - 1 >= 0 && (a[e - 1][t][1] && (n = (n = a[e - 1][t][1]).substr(n.length - 3, 3),
-            console.log(n),
+            /*console.log(n)*/undefined,
             n >= 118 && n <= 164 && (o *= 5)));
           a[e][t + 1][1] && (n = (n = a[e][t + 1][1]).substr(n.length - 3, 3),
-            console.log(n),
+            /*console.log(n)*/undefined,
             n >= 118 && n <= 164 && (o *= 7));
           t - 1 >= 0 && (a[e + 1][t - 1][1] && (n = (n = a[e + 1][t - 1][1]).substr(n.length - 3, 3),
-            console.log(n),
+            /*console.log(n)*/undefined,
             n >= 118 && n <= 164 && (o *= 11)));
           e - 1 >= 0 && t - 1 >= 0 && (a[e - 1][t - 1][1] && (n = (n = a[e - 1][t - 1][1]).substr(n.length - 3, 3),
-            console.log(n),
+            /*console.log(n)*/undefined,
             n >= 118 && n <= 164 && (o *= 13)));
           e - 1 >= 0 && (a[e - 1][t + 1][1] && (n = (n = a[e - 1][t + 1][1]).substr(n.length - 3, 3),
-            console.log(n),
+            /*console.log(n)*/undefined,
             n >= 118 && n <= 164 && (o *= 17)));
           a[e + 1][t + 1][1] && (n = (n = a[e + 1][t + 1][1]).substr(n.length - 3, 3),
-            console.log(n),
+            /*console.log(n)*/undefined,
             n >= 118 && n <= 164 && (o *= 19));
           return o
         }
@@ -1725,7 +1725,7 @@ window.__require = function e(t, n, a) {
           this.tab_content[e].active = !0
       },
       on_tab_button_click: function (e, t) {
-        console.log(e),
+        /*console.log(e)*/undefined,
           t = parseInt(t);
         for (var n = 0; n < this.tab_button.length; n++)
           n == t ? this.enable_tab(n) : this.disable_tab(n)
@@ -1798,7 +1798,7 @@ window.__require = function e(t, n, a) {
           this.node.getChildByName("Tx1").getComponent(cc.Label).string = o[101][1],
           "newfile20191012" !== d.name) {
           var t = c.target(this.node).getChildByName("paper_zoom").getChildByName("paper");
-          console.log(h);
+          /*console.log(h);*/undefined;
           h.val;
           var n = d.name
             , u = JSON.parse(cc.sys.localStorage.getItem(n));
@@ -1827,8 +1827,8 @@ window.__require = function e(t, n, a) {
                     if (y < 4) {
                       var f = u[g][C][y].substr(6, 3);
                       i[g][C][y] = ("000" + g).substr(-3) + ("000" + C).substr(-3) + y + f,
-                        console.log(f),
-                        console.log(o[f][0]);
+                        /*console.log(f)*/undefined,
+                        /*console.log(o[f][0]);*/undefined;
                       var v = 1e4 * o[f][0] - (99 - g + 100 * C) - 1;
                       l.data(g, C, i[g][C][y], v, t, f)
                     } else
@@ -2288,7 +2288,7 @@ window.__require = function e(t, n, a) {
         },
         start: function () { },
         in: function (e, t) {
-          console.log(this.anim_com),
+          /*console.log(this.anim_com)*/undefined,
             this.anim_com.play("in")
         },
         out: function (e, t) {
@@ -2309,7 +2309,7 @@ window.__require = function e(t, n, a) {
         },
         start: function () { },
         in: function (e, t) {
-          console.log(this.anim_com),
+          /*console.log(this.anim_com)*/undefined,
             this.anim_com.play("in")
         },
         shape_in: function () {
@@ -2345,7 +2345,7 @@ window.__require = function e(t, n, a) {
                 _.x = 100 * l + 50 - r.width / 2 + o[d][2],
                 _.y = 100 * h + 50 - r.height / 2 + o[d][3]
             }
-          console.log("success!!!!!!!!!!!")
+          /*console.log("success!!!!!!!!!!!")*/undefined;
         }
       });
     t.exports = i,
@@ -2375,16 +2375,16 @@ window.__require = function e(t, n, a) {
         var e = this;
         this.node.getChildByName("loading").active = !0,
           a.w = this.width.getComponent(cc.Label).string,
-          console.log(a.w),
+          /*console.log(a.w)*/undefined,
           a.h = this.height.getComponent(cc.Label).string,
-          console.log(a.h),
+          /*console.log(a.h)*/undefined,
           this.text.string = "0%",
           this.progress.progress = 0,
           cc.director.preloadScene("workpaper" + cc.director.getScene().name.substr(4, cc.director.getScene().name.length - 4), function (t, n, a) {
             var o = t / n;
             e.progress.progress = o,
               e.text.string = parseInt(100 * o) + "%",
-              console.log(e.text.string)
+              /*console.log(e.text.string)*/undefined;
           }, function () {
             cc.director.loadScene("workpaper" + cc.director.getScene().name.substr(4, cc.director.getScene().name.length - 4))
           })
@@ -2403,9 +2403,9 @@ window.__require = function e(t, n, a) {
       , o = {
         data: function (e, t, n, o, c) {
           var i = n.getChildByName(c).name;
-          console.log("@@@@@@@@@@@@@@@" + i);
+          /*console.log("@@@@@@@@@@@@@@@" + i);*/undefined;
           i = i.substr(0, i.length - 3) + o;
-          console.log("@@@@@@@@@@@@@@@" + i),
+          /*console.log("@@@@@@@@@@@@@@@" + i)*/undefined,
             n.getChildByName(c).name = i,
             a[e][t][1] = i
         }
@@ -2433,9 +2433,9 @@ window.__require = function e(t, n, a) {
             n.getChildByName(i).getComponent(cc.Sprite).spriteFrame = t
           });
           var l = i;
-          console.log("@@@@@@@@@@@@@@@" + l),
+          /*console.log("@@@@@@@@@@@@@@@" + l)*/undefined,
             l = l.substr(0, l.length - 3) + r,
-            console.log("@@@@@@@@@@@@@@@" + l),
+            /*console.log("@@@@@@@@@@@@@@@" + l)*/undefined,
             n.getChildByName(i).name = l,
             a[e][t][1] = l
         }
@@ -2566,7 +2566,7 @@ window.__require = function e(t, n, a) {
               var e = t.initImage();
               t.saveFile(e)
             }, 0, 0),
-            console.log(this.camera)
+            /*console.log(this.camera)*/undefined;
         },
         initImage: function () {
           var e = this.texture.readPixels();
@@ -2618,16 +2618,16 @@ window.__require = function e(t, n, a) {
         properties: {},
         start: function () { },
         move_to: function (e, t) {
-          if (console.log("#######"),
-            console.log(t),
+          if (/*console.log("#######")*/undefined,
+            /*console.log(t)*/undefined,
             t = parseInt(t),
-            console.log(t),
+            /*console.log(t)*/undefined,
             1 == t) {
             var n = cc.moveTo(1, cc.p(256, -340)).easing(cc.easeBackOut());
             this.node.runAction(n),
-              console.log("111#######")
+              /*console.log("111#######")*/undefined;
           } else {
-            console.log("000#######");
+            /*console.log("000#######");*/undefined;
             n = cc.moveTo(1, cc.p(-250, -340)).easing(cc.easeBackOut());
             this.node.runAction(n)
           }
@@ -2650,7 +2650,7 @@ window.__require = function e(t, n, a) {
           return n
         }
       };
-    console.log("))))))))))))))))))" + a.w),
+    /*console.log("))))))))))))))))))" + a.w)*/undefined,
       t.exports = o,
       cc._RF.pop()
   }
@@ -2688,11 +2688,11 @@ window.__require = function e(t, n, a) {
       },
       on_touch_end: function (e) {
         this.node.getChildByName("Background").color = new cc.Color(255, 166, 53),
-          console.log(o);
+          /*console.log(o);*/undefined;
         var t = this.node.getChildByName("number").getComponent(cc.Label).string;
         parseInt(t) !== o.val && (this.node.parent.children[o.val].getChildByName("Background").color = new cc.Color(255, 255, 255)),
           o.val = parseInt(t),
-          console.log(o.val)
+          /*console.log(o.val)*/undefined;
       },
       on_touch_cancel: function (e) {
         "workpaper" == cc.director.getRunningScene().name.substr(0, 9) && (a.t2 = a.t2 + 1)
@@ -2903,7 +2903,7 @@ window.__require = function e(t, n, a) {
                     var d = ("000" + r).substr(-3) + ("000" + l).substr(-3) + h + o[r][l][h];
                     n.push(d)
                   }
-          if (console.log(n),
+          if (/*console.log(n)*/undefined,
             cc.sys.localStorage.setItem(e, JSON.stringify(n)),
             JSON.parse(cc.sys.localStorage.getItem("document_list")))
             (t = JSON.parse(cc.sys.localStorage.getItem("document_list"))).push(e),
@@ -2913,7 +2913,7 @@ window.__require = function e(t, n, a) {
               t.push(e),
               cc.sys.localStorage.setItem("document_list", JSON.stringify(t));
           var u = JSON.parse(cc.sys.localStorage.getItem("document_list"));
-          console.log(u),
+          /*console.log(u)*/undefined,
             this.node.active = !1
         }
       }
@@ -2948,7 +2948,7 @@ window.__require = function e(t, n, a) {
         }
       },
       onLoad: function () {
-        if (console.log("dsfasdfadfa" + cc.director.getRunningScene().name),
+        if (/*console.log("dsfasdfadfa" + cc.director.getRunningScene().name)*/undefined,
           JSON.parse(cc.sys.localStorage.getItem("document_list"))) {
           var e = JSON.parse(cc.sys.localStorage.getItem("document_list"));
           a.val = 0;
@@ -2965,8 +2965,8 @@ window.__require = function e(t, n, a) {
               o.name == e[c] && (i.getChildByName("Background").color = new cc.Color(209, 187, 159),
                 a.val = c)
           }
-          console.log(this.button.parent.children),
-            console.log("select" + a.val),
+          /*console.log(this.button.parent.children)*/undefined,
+            /*console.log("select" + a.val)*/undefined,
             t.parent.parent.height = 75 * (e.length - 1) + 100
         }
       },
@@ -3070,9 +3070,9 @@ window.__require = function e(t, n, a) {
       start: function () { },
       newmap: function (e, t) {
         a.w = this.node.getChildByName("content").getChildByName("new").getChildByName("main").getChildByName("width").getComponent(cc.Label).string,
-          console.log(a.w),
+          /*console.log(a.w)*/undefined,
           a.h = this.node.getChildByName("content").getChildByName("new").getChildByName("main").getChildByName("height").getComponent(cc.Label).string,
-          console.log(a.h),
+          /*console.log(a.h)*/undefined,
           this.scheduleOnce(function () {
             cc.director.loadScene("workpaper")
           }, 0)
@@ -3110,8 +3110,8 @@ window.__require = function e(t, n, a) {
       extends: cc.Component,
       properties: {},
       onLoad: function () {
-        console.log("$$$$$$$$$$$"),
-          console.log(a.w)
+        /*console.log("$$$$$$$$$$$")*/undefined,
+          /*console.log(a.w)*/undefined;
       },
       start: function () { }
     }),
@@ -3138,9 +3138,9 @@ window.__require = function e(t, n, a) {
             e.initWithSize(2e3, 2e3, t.STENCIL_INDEX8),
             this.camera.targetTexture = e,
             this.texture = e,
-            console.log("1:"),
-            console.log(cc.visibleRect.width + "=====" + cc.visibleRect.height),
-            console.log("asdasdasd" + this.camera.name)
+            /*console.log("1:")*/undefined,
+            /*console.log(cc.visibleRect.width + "=====" + cc.visibleRect.height)*/undefined,
+            /*console.log("asdasdasd" + this.camera.name)*/undefined;
         },
         createImg: function () {
           var e = this._canvas.toDataURL("image/png")
@@ -3181,13 +3181,13 @@ window.__require = function e(t, n, a) {
                 a.destroy()
             }),
             this.captureAction(a, o, c),
-            console.log("2:"),
-            console.log(this.texture),
-            console.log(t);
+            /*console.log("2:")*/undefined,
+            /*console.log(this.texture)*/undefined,
+            /*console.log(t);*/undefined;
           var i = this.texture.readPixels();
-          console.log(i);
+          /*console.log(i);*/undefined;
           var s = jsb.fileUtils.getWritablePath() + "Image.png";
-          console.log(s)
+          /*console.log(s)*/undefined;
         },
         captureAction: function (e, t, n) {
           var a = cc.scaleTo(1, .3)
@@ -3568,32 +3568,32 @@ window.__require = function e(t, n, a) {
         }),
           o.open > 0) {
           var i = o.open;
-          console.log("test open"),
-            console.log(this.canvas.getChildByName("Q" + o.open)),
-            console.log(this.canvas.getChildByName("Q" + o.open).getChildByName("Q1-1")),
-            console.log(t);
+          /*console.log("test open")*/undefined,
+            /*console.log(this.canvas.getChildByName("Q" + o.open))*/undefined,
+            /*console.log(this.canvas.getChildByName("Q" + o.open).getChildByName("Q1-1"))*/undefined,
+            /*console.log(t);*/undefined;
           for (var l = 1; l <= t; l++)
             switch (l) {
               case 1:
-                console.log(this.canvas.getChildByName("Q" + i).getChildByName("Q1-1")),
+                /*console.log(this.canvas.getChildByName("Q" + i).getChildByName("Q1-1"))*/undefined,
                   this.scheduleOnce(function () {
                     this.canvas.getChildByName("Q" + i).getChildByName("Q1-1").getComponent(cc.Animation).play("queueA1_back")
                   }, .1 * (l - 1));
                 break;
               case 2:
-                console.log(this.canvas.getChildByName("Q" + o.open).getChildByName("Q1-2")),
+                /*console.log(this.canvas.getChildByName("Q" + o.open).getChildByName("Q1-2"))*/undefined,
                   this.scheduleOnce(function () {
                     this.canvas.getChildByName("Q" + i).getChildByName("Q1-2").getComponent(cc.Animation).play("queueA1_back")
                   }, .1 * (l - 1));
                 break;
               case 3:
-                console.log(this.canvas.getChildByName("Q" + o.open).getChildByName("Q1-3")),
+                /*console.log(this.canvas.getChildByName("Q" + o.open).getChildByName("Q1-3"))*/undefined,
                   this.scheduleOnce(function () {
                     this.canvas.getChildByName("Q" + i).getChildByName("Q1-3").getComponent(cc.Animation).play("queueA1_back")
                   }, .1 * (l - 1));
                 break;
               case 4:
-                console.log(312314124214),
+                /*console.log(312314124214)*/undefined,
                   this.scheduleOnce(function () {
                     this.canvas.getChildByName("Q" + i).getChildByName("Q1-4").getComponent(cc.Animation).play("queueA1_back")
                   }, .25);
@@ -3711,8 +3711,8 @@ window.__require = function e(t, n, a) {
       },
       on_touch_end: function (e) {
         this.target.active ? this.target.active = !1 : this.target.active = !0,
-          console.log(o.w + "sdfasdfa" + o.h),
-          console.log(c.length + "qweqwe" + c[1].length)
+          /*console.log(o.w + "sdfasdfa" + o.h)*/undefined,
+          /*console.log(c.length + "qweqwe" + c[1].length)*/undefined;
       },
       on_touch_cancel: function (e) {
         a.t2 = a.t2 + 1
@@ -3785,8 +3785,8 @@ window.__require = function e(t, n, a) {
               c.name == t[i] && (s.getChildByName("Background").color = new cc.Color(209, 187, 159),
                 o.val = i)
           }
-          console.log(this.button.parent.children),
-            console.log("select" + o.val),
+          /*console.log(this.button.parent.children)*/undefined,
+            /*console.log("select" + o.val)*/undefined,
             n.parent.parent.height = 75 * (t.length - 1) + 100
         }
       },
@@ -3896,8 +3896,8 @@ window.__require = function e(t, n, a) {
               c.name == t[s] && (r.getChildByName("Background").color = new cc.Color(209, 187, 159),
                 o.val = s)
           }
-          console.log(this.button.parent.children),
-            console.log("select" + o.val),
+          /*console.log(this.button.parent.children)*/undefined,
+            /*console.log("select" + o.val)*/undefined,
             n.parent.parent.height = 75 * (t.length - 1) + 100
         }
       },
@@ -3955,7 +3955,7 @@ window.__require = function e(t, n, a) {
               e += "1";
         this.target.getComponent(cc.RichText).string = "31232141232132",
           this.target.getComponent(cc.RichText).string = e,
-          console.log(e)
+          /*console.log(e)*/undefined;
       }
     }),
       cc._RF.pop()
@@ -4079,7 +4079,7 @@ window.__require = function e(t, n, a) {
         var t = a.target(this.node).getChildByName("paper_zoom").getChildByName("paper")
           , n = new Date
           , s = n.getTime();
-        console.log("success!!!!!!!!!!!" + s + "-" + n.getTime());
+        /*console.log("success!!!!!!!!!!!" + s + "-" + n.getTime());*/undefined;
         for (var r = 0; r < c.w; r++)
           for (var l = 0; l < c.h; l++) {
             var h = t.getChildByName(i[r][l][0]).getComponent(cc.Sprite)
@@ -4087,7 +4087,7 @@ window.__require = function e(t, n, a) {
             h.spriteFrame = d
           }
         var u = n.getTime() - s;
-        console.log("success!!!!!!!!!!!" + u + "-" + n.getTime()),
+        /*console.log("success!!!!!!!!!!!" + u + "-" + n.getTime())*/undefined,
           o.t2 = s
       },
       on_touch_cancel: function (e) { },
@@ -4144,7 +4144,7 @@ window.__require = function e(t, n, a) {
             , n = this.target.children[o.val].getChildByName("Background").getChildByName("Label").getComponent(cc.Label).string;
           t.splice(o.val + 1, 0, n),
             cc.sys.localStorage.setItem("document_list", JSON.stringify(t)),
-            console.log(t);
+            /*console.log(t);*/undefined;
           for (var a = this.button, c = 1; c < a.parent.childrenCount; c++)
             a.parent.children[c].destroy();
           for (var i = 1; i < t.length; i++) {
@@ -4156,8 +4156,8 @@ window.__require = function e(t, n, a) {
               s.getChildByName("Background").getChildByName("Label").getComponent(cc.Label).string = t[i],
               s.getChildByName("number").getComponent(cc.Label).string = i
           }
-          console.log(this.button.parent.children),
-            console.log("select" + o.val),
+          /*console.log(this.button.parent.children)*/undefined,
+            /*console.log("select" + o.val)*/undefined,
             a.parent.parent.height = 75 * (t.length - 1) + 100
         }
       },
@@ -4217,7 +4217,7 @@ window.__require = function e(t, n, a) {
             cc.sys.localStorage.setItem(n + "data", JSON.stringify(c)),
             t.splice(o.val + 1, 0, n),
             cc.sys.localStorage.setItem("document_list", JSON.stringify(t)),
-            console.log(t);
+            /*console.log(t);*/undefined;
           for (var i = this.button, s = 1; s < i.parent.childrenCount; s++)
             i.parent.children[s].destroy();
           for (var r = 1; r < t.length; r++) {
@@ -4229,8 +4229,8 @@ window.__require = function e(t, n, a) {
               l.getChildByName("Background").getChildByName("Label").getComponent(cc.Label).string = t[r],
               l.getChildByName("number").getComponent(cc.Label).string = r
           }
-          console.log(this.button.parent.children),
-            console.log("select" + o.val),
+          /*console.log(this.button.parent.children)*/undefined,
+            /*console.log("select" + o.val)*/undefined,
             i.parent.parent.height = 75 * (t.length - 1) + 100,
             o.val = 0
         }
@@ -4291,7 +4291,7 @@ window.__require = function e(t, n, a) {
         this.node.active = !0
       },
       enter: function (e) {
-        console.log(o.val);
+        /*console.log(o.val);*/undefined;
         var t = JSON.parse(cc.sys.localStorage.getItem("document_list"));
         if (0 !== o.val) {
           var n = t[o.val];
@@ -4315,12 +4315,12 @@ window.__require = function e(t, n, a) {
               i == o.val && (s.getChildByName("Background").color = new cc.Color(209, 187, 159),
                 o.val = i)
           }
-          console.log(this.button.parent.children),
-            console.log("select" + o.val),
+          /*console.log(this.button.parent.children)*/undefined,
+            /*console.log("select" + o.val)*/undefined,
             a.parent.parent.height = 75 * (t.length - 1) + 100,
             this.node.active = !1
         }
-        console.log(o.val)
+        /*console.log(o.val)*/undefined;
       },
       on_touch_end: function (e) { },
       on_touch_cancel: function (e) {
@@ -4390,9 +4390,9 @@ window.__require = function e(t, n, a) {
             var _ = JSON.parse(cc.sys.localStorage.getItem(p + "data"));
             d.name = p,
               u.w = _.w,
-              console.log(u.w),
+              /*console.log(u.w)*/undefined,
               u.h = _.h,
-              console.log(u.h)
+              /*console.log(u.h)*/undefined;
           } else
             d.name = p,
               u.w = C[0],
@@ -4404,7 +4404,7 @@ window.__require = function e(t, n, a) {
               var o = e / n;
               t.progress.progress = o,
                 t.text.string = parseInt(100 * o) + "%",
-                console.log(t.text.string)
+                /*console.log(t.text.string)*/undefined;
             }, function () {
               cc.director.loadScene("workpaper" + cc.director.getScene().name.substr(4, cc.director.getScene().name.length - 4))
             })
@@ -4412,7 +4412,7 @@ window.__require = function e(t, n, a) {
         if ("workpaper" == cc.director.getScene().name.substr(0, 9) && 0 !== h.val) {
           var m = a.target(this.node)
             , g = m.getChildByName("paper_zoom").getChildByName("paper");
-          console.log(h);
+          /*console.log(h);*/undefined;
           var C;
           n = h.val,
             p = this.target.children[n].getChildByName("Background").getChildByName("Label").getComponent(cc.Label).string;
@@ -4441,8 +4441,8 @@ window.__require = function e(t, n, a) {
                     if (b < 4) {
                       var B = C[v][N][b].substr(6, 3);
                       c[v][N][b] = ("000" + v).substr(-3) + ("000" + N).substr(-3) + b + B,
-                        console.log(B),
-                        console.log(r[B][0]);
+                        /*console.log(B)*/undefined,
+                        /*console.log(r[B][0]);*/undefined;
                       var w = 1e4 * r[B][0] - (99 - v + 100 * N) - 1;
                       l.data(v, N, c[v][N][b], w, g, B)
                     } else
@@ -4555,16 +4555,16 @@ window.__require = function e(t, n, a) {
           d.name = p,
             this.view.active = !0,
             u.w = _.w,
-            console.log(u.w),
+            /*console.log(u.w)*/undefined,
             u.h = _.h,
-            console.log(u.h),
+            /*console.log(u.h)*/undefined,
             this.text.string = "0%",
             this.progress.progress = 0,
             cc.director.preloadScene("workpaper", function (e, n, a) {
               var o = e / n;
               t.progress.progress = o,
                 t.text.string = parseInt(100 * o) + "%",
-                console.log(t.text.string)
+                /*console.log(t.text.string)*/undefined;
             }, function () {
               cc.director.loadScene("workpaper")
             })
@@ -4572,20 +4572,20 @@ window.__require = function e(t, n, a) {
         if ("workpaper" == cc.director.getScene().name && 0 !== h.val) {
           var m = a.target(this.node)
             , g = m.getChildByName("paper_zoom").getChildByName("paper");
-          console.log(h);
+          /*console.log(h);*/undefined;
           n = h.val,
             p = this.target.children[n].getChildByName("Background").getChildByName("Label").getComponent(cc.Label).string;
           var C = JSON.parse(cc.sys.localStorage.getItem(p));
           _ = JSON.parse(cc.sys.localStorage.getItem(p + "data"));
-          console.log("rrrrrrrrrrrrrrrrrrrrrrrrrrrrr" + _.w),
-            console.log("rrrrrrrrrrrrrrrrrrrrrrrrrrrrr" + _.h),
+          /*console.log("rrrrrrrrrrrrrrrrrrrrrrrrrrrrr" + _.w)*/undefined,
+            /*console.log("rrrrrrrrrrrrrrrrrrrrrrrrrrrrr" + _.h)*/undefined,
             this.paper.width = 100 * _.w,
             this.paper.height = 100 * _.h,
             this.paper.getChildByName("ground").width = 100 * _.w,
             this.paper.getChildByName("ground").height = 100 * _.h,
             this.paper.getChildByName("grid").width = 100 * _.w,
             this.paper.getChildByName("grid").height = 100 * _.h,
-            console.log(C),
+            /*console.log(C)*/undefined,
             d.name = p;
           var y = JSON.parse(cc.sys.localStorage.getItem(p + "data")).earth
             , f = this.ground.getComponent(cc.Sprite);
@@ -4600,8 +4600,8 @@ window.__require = function e(t, n, a) {
                 if (C[v][N][b] && (c[v][N][b] = C[v][N][b],
                   4 !== b)) {
                   var B = C[v][N][b].substr(6, 3);
-                  console.log(B),
-                    console.log(r[B][0]);
+                  /*console.log(B)*/undefined,
+                    /*console.log(r[B][0]);*/undefined;
                   var w = 1e4 * r[B][0] - (99 - v + 100 * N) - 1;
                   l.data(v, N, C[v][N][b], w, g, B)
                 }
@@ -4656,10 +4656,10 @@ window.__require = function e(t, n, a) {
           , n = parseInt(this.node.name.substr(7, 1));
         a[0] = a[n];
         var i = s.target(this.node);
-        console.log(i),
-          console.log(s.target(this.node).getChildByName("top_tools"));
+        /*console.log(i)*/undefined,
+          /*console.log(s.target(this.node).getChildByName("top_tools"));*/undefined;
         var r = i.getChildByName("top_tools").getChildByName("erase").getChildByName("Background").getComponent(cc.Sprite);
-        console.log(r),
+        /*console.log(r)*/undefined,
           cc.loader.loadRes("ui-erase", cc.SpriteFrame, function (e, t) {
             r.spriteFrame = t
           });
@@ -4667,10 +4667,10 @@ window.__require = function e(t, n, a) {
         if (c.open > 0)
           var h = o[c.open];
         var d = c.open;
-        if (console.log(l),
+        if (/*console.log(l)*/undefined,
           t <= -1700) {
           c.open = n,
-            console.log("current_list.open:" + c.open);
+            /*console.log("current_list.open:" + c.open);*/undefined;
           for (var u = 1; u <= l; u++)
             switch (u) {
               case 1:
@@ -4757,8 +4757,8 @@ window.__require = function e(t, n, a) {
             }
         } else {
           c.open = 0,
-            console.log("cancel"),
-            console.log("current_list.open:" + c.open);
+            /*console.log("cancel")*/undefined,
+            /*console.log("current_list.open:" + c.open);*/undefined;
           for (u = l; u > 0; u--)
             switch (u) {
               case 1:
@@ -4803,7 +4803,7 @@ window.__require = function e(t, n, a) {
             }
           c.open = 0
         }
-        console.log(a[0])
+        /*console.log(a[0])*/undefined;
       },
       on_touch_cancel: function (e) {
         i.t2 = i.t2 + 1
@@ -4884,16 +4884,16 @@ window.__require = function e(t, n, a) {
                 r == c.val && (l.getChildByName("Background").color = new cc.Color(209, 187, 159),
                   c.val = r)
             }
-            console.log(this.button.parent.children),
-              console.log("select" + c.val),
+            /*console.log(this.button.parent.children)*/undefined,
+              /*console.log("select" + c.val)*/undefined,
               i.parent.parent.height = 75 * (n.length - 1) + 100
           }
         }
       },
       on_touch_end: function (e) {
         o.data("eeeeee", "bbbb"),
-          console.log(cc.sys.localStorage.getItem("bbbb")),
-          console.log(cc.sys.localStorage.getItem("eeeeee"))
+          /*console.log(cc.sys.localStorage.getItem("bbbb"))*/undefined,
+          /*console.log(cc.sys.localStorage.getItem("eeeeee"))*/undefined;
       },
       on_touch_cancel: function (e) {
         "workpaper" == cc.director.getRunningScene().name && (a.t2 = a.t2 + 1)
@@ -4932,7 +4932,7 @@ window.__require = function e(t, n, a) {
           , i = e % 13
           , s = e % 17
           , r = e % 19;
-        return console.log(),
+        return /*console.log()*/undefined,
           e = 118,
           0 !== t && 0 !== n && 0 !== a && 0 !== o && (e = 118),
           0 == t && 0 !== n && 0 !== a && 0 !== o && (e = 119),
@@ -4999,8 +4999,8 @@ window.__require = function e(t, n, a) {
         extends: cc.Component,
         properties: {},
         start: function () {
-          console.log(cc.macro.MIN_ZINDEX),
-            console.log(cc.macro.MAX_ZINDEX)
+          /*console.log(cc.macro.MIN_ZINDEX)*/undefined,
+            /*console.log(cc.macro.MAX_ZINDEX)*/undefined;
         }
       }),
       cc._RF.pop()
