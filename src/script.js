@@ -6,6 +6,8 @@ if (!canvas || !(canvas instanceof HTMLCanvasElement))
 const ctx = canvas.getContext("2d");
 if (!ctx)
     throw new Error();
+canvas.height = document.body.clientHeight;
+canvas.width = document.body.clientWidth;
 //すべてのアイテムをロード
 let imageLoadStatus = 0;
 const imageItems = (() => {

@@ -3,6 +3,11 @@ const canvas = document.getElementById("canvas")
 if (!canvas || !(canvas instanceof HTMLCanvasElement)) throw new Error()
 const ctx = canvas.getContext("2d")
 if (!ctx) throw new Error()
+
+//大きさを画面最大に
+canvas.height = document.body.clientHeight
+canvas.width = document.body.clientWidth
+
 //すべてのアイテムをロード
 let imageLoadStatus: number = 0
 const imageItems: Map<string, Items> = (() => {
