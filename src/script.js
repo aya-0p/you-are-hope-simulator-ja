@@ -2690,6 +2690,7 @@ const imageItems = (() => {
     imageItemsOriginal.forEach(item => {
         const img = new Image();
         img.src = `./res/${item.name}.png`;
+        img.crossOrigin = "anonymous";
         imageItemsMap.set(item.name, {
             width: item.width,
             height: item.height,
@@ -2834,6 +2835,25 @@ window.addEventListener("DOMContentLoaded", () => {
             name: "壁　　　　　　　　　　▶"
         }, {
             name: "柱　　　　　　　　　　▶"
+        }, {
+            name: "リセット",
+            callback: () => {
+                projectData.forEach(d => {
+                    d.layer0 = `biome_unknown_${Math.floor(Math.random() * 16) + 1}`;
+                    d.layer1 = undefined;
+                    d.layer2 = undefined;
+                    d.layer3 = undefined;
+                    d.layer4 = undefined;
+                });
+            }
+        }, {
+            name: "保存",
+            callback: () => {
+                const l = document.createElement("a");
+                l.download = "image.png";
+                l.href = canvas.toDataURL();
+                l.click();
+            },
         }
     ];
     // var Proto = Proto;
