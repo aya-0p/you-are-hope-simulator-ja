@@ -18,7 +18,8 @@ const settings: Setting = {
   showGrid: false,
   isClick: false,
   clickedList: [],
-  block: 130
+  block: 130,
+  debug: true
 }
 
 //すべてのアイテムをロード
@@ -2691,7 +2692,7 @@ const imageItems: Map<string, Items> = (() => {
   imageItemsOriginal.forEach(item => {
     const img = new Image()
     img.src = `./res/${item.name}.png`
-    img.crossOrigin = "anonymous"
+    if (!settings.debug) img.crossOrigin = "anonymous"
     imageItemsMap.set(item.name, {
       width: item.width,
       height: item.height,
@@ -3263,6 +3264,7 @@ interface subMenuD {
   items: Array<subMenuI>;
 }
 interface Setting {
+  /**画面拡大率 */
   zoom: number;
   currentSelectingType: Category;
   currentSelectingItem: string;
@@ -3270,4 +3272,9 @@ interface Setting {
   isClick: boolean;
   clickedList: Array<string>;
   block: number;
+  /**
+   * webサーバーを起動せず、ローカルで見る場合はtrue(画像保存不可),
+   * webサーバーを立てるか、本番環境ではfalse
+   */
+  debug: boolean;
 }
