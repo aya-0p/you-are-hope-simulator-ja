@@ -13,15 +13,59 @@
       overflow: hidden;
       background-color: black;
     }
+    ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+    }
+    li {
+      cursor: pointer;
+      user-select: none;
+    }
+    #menu {
+      display: flex;
+      flex-direction: row;
+      background-color: lightgray;
+    }
+    .menu {
+      padding-top: 1px;
+      padding-bottom: 2px;
+      padding-left: 2px;
+      padding-right: 2px;
+      margin-top: 1px;
+      margin-bottom: 1px;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+    .menu2 {
+      display: none;
+      position: absolute;
+      background-color: lightgray;
+      width: max-content;
+      border-radius: 5px;
+      box-shadow: -1px 1px 1px gray;
+    }
+    .menu3 {
+      padding-top: 1px;
+      padding-bottom: 2px;
+      padding-left: 20px;
+      padding-right: 10px;
+      margin-top: 1px;
+      margin-bottom: 1px;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+    .menu4 {
+      left: calc(100% - 2px);
+      top: 0px;
+    }
   </style>
-  <link type="text/css" rel="stylesheet" href="./src/proto.menu.css">
 </head>
 
 <body>
+  <ul id="menu"></ul>
   <canvas height="800" width="800" id="canvas"></canvas>
-  <script src="./src/prototype.js"></script>
-  <script src="./src/proto.menu.0.6.js"></script>
-  <script src="./src/script.js"></script>
+  <script type="module" src="./scripts/script.js"></script>
 </body>
 
 </html>
