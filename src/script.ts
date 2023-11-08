@@ -1,5 +1,5 @@
 import { images } from "./itemSettings.js";
-import menu from "./menu.js"
+import menu from "./menu.js";
 import { debug } from "./scriptSettings.js";
 menu(debug);
 interface Setting {
@@ -69,7 +69,8 @@ class Main {
   public readonly canvas: HTMLCanvasElement = (() => {
     //キャンバスを取得
     const canvas = document.getElementById("canvas");
-    if (!canvas || !(canvas instanceof HTMLCanvasElement)) throw new Error("canvas is not found");
+    if (!canvas || !(canvas instanceof HTMLCanvasElement))
+      throw new Error("canvas is not found");
     //大きさを画面最大に
     canvas.height = document.body.clientHeight;
     canvas.width = document.body.clientWidth;
@@ -81,9 +82,9 @@ class Main {
     return ctx;
   })();
   public readonly settings: Setting = {
-    zoom: 0.2,
+    zoom: 0.5,
     item: "",
-    grid: false,
+    grid: true,
     click: false,
     clickedList: [],
     block: 130,
@@ -94,7 +95,7 @@ class Main {
   public readonly images: Map<string, Item> = new Map(
     images.map((item) => {
       const img = new Image();
-      img.src = `./images/${item.fileName}`;
+      img.src = `./res/${item.fileName}`;
       return [item.id, { img, x: item.x, y: item.y }];
     })
   );
@@ -105,20 +106,27 @@ class Main {
   public draw = () =>
     new Promise<void>((resolve) => {
       const xBlocks = Math.ceil(
-        this.ctx.canvas.height / (this.settings.block * this.settings.zoom)
+        this.ctx.canvas.width / (this.settings.block * this.settings.zoom)
       );
       const yBlocks = Math.ceil(
-        this.ctx.canvas.width / (this.settings.block * this.settings.zoom)
+        this.ctx.canvas.height / (this.settings.block * this.settings.zoom)
       );
       // 描画前にキャンバスをクリア
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
       // バイオームを描画
       for (let x = 0; x < xBlocks; x++) {
         for (let y = 0; y < yBlocks; y++) {
+          const biome_ =
+            this.projectData.get(`${x}_${y}`)?.layer1 ?? this.settings.biome;
           const biomeId =
-            this.projectData.get(`${x}_${y}`)?.layer1 ??
-            this.settings.biome +
-              String(Math.floor(Math.random() * 32)).padStart(3, "0");
+            biome_ +
+            String(
+              ((x + y * 1000) %
+                Array(...this.images.keys()).filter((value) =>
+                  value.match(RegExp(`${biome_}...`))
+                ).length) +
+                1
+            ).padStart(3, "0");
           const biome = this.images.get(biomeId);
           if (!biome) {
             console.error("バイオームが見つかりませんでした", biomeId);
@@ -128,8 +136,8 @@ class Main {
             biome.img,
             (x * this.settings.block - biome.x) * this.settings.zoom,
             (y * this.settings.block - biome.y) * this.settings.zoom,
-            this.settings.block * this.settings.zoom,
-            this.settings.block * this.settings.zoom
+            biome.img.width * this.settings.zoom,
+            biome.img.height * this.settings.zoom
           );
         }
       }
@@ -146,8 +154,8 @@ class Main {
             item.img,
             (data.x * this.settings.block - item.x) * this.settings.zoom,
             (data.y * this.settings.block - item.y) * this.settings.zoom,
-            this.settings.block * this.settings.zoom,
-            this.settings.block * this.settings.zoom
+            item.img.width * this.settings.zoom,
+            item.img.height * this.settings.zoom
           );
         } else {
           if (data.layer2) {
@@ -160,8 +168,8 @@ class Main {
               item.img,
               (data.x * this.settings.block - item.x) * this.settings.zoom,
               (data.y * this.settings.block - item.y) * this.settings.zoom,
-              this.settings.block * this.settings.zoom,
-              this.settings.block * this.settings.zoom
+              item.img.width * this.settings.zoom,
+              item.img.height * this.settings.zoom
             );
           }
           if (data.layer3) {
@@ -174,8 +182,8 @@ class Main {
               item.img,
               (data.x * this.settings.block - item.x) * this.settings.zoom,
               (data.y * this.settings.block - item.y) * this.settings.zoom,
-              this.settings.block * this.settings.zoom,
-              this.settings.block * this.settings.zoom
+              item.img.width * this.settings.zoom,
+              item.img.height * this.settings.zoom
             );
           }
         }
@@ -183,7 +191,7 @@ class Main {
       // グリッドを描画
       if (this.settings.grid) {
         this.ctx.strokeStyle = "rgba(0,0,0,0.5)";
-        this.ctx.lineWidth = 1;
+        this.ctx.lineWidth = 3;
         for (let x = 0; x < xBlocks; x++) {
           this.ctx.beginPath();
           this.ctx.moveTo(x * this.settings.block * this.settings.zoom, 0);
@@ -231,11 +239,11 @@ class Main {
     pointData[this.settings.layer] = this.settings.item;
   }
 }
-const result = new Main();
+export var result = new Main();
 result.canvas.addEventListener("mousedown", (event) => {
   if (event.button === 0) {
     result.settings.click = true;
-    result.changeData(event.x, event.y);
+    result.changeData(event.offsetX, event.offsetY);
   }
 });
 result.canvas.addEventListener("mouseup", (event) => {
@@ -246,12 +254,10 @@ result.canvas.addEventListener("mouseup", (event) => {
 });
 result.canvas.addEventListener("mousemove", (event) => {
   if (event.button === 0 && result.settings.click) {
-    result.changeData(event.x, event.y);
+    result.changeData(event.offsetX, event.offsetY);
   }
 });
 // 60fpsで描画
-/*
 setInterval(() => {
   result.draw();
 }, 1000 / 60);
-*/
